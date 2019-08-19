@@ -169,8 +169,7 @@ set RegKey=%RegKeyAppPaths%
 reg add "%RegKey%" /f /ve /d "%FilePath%" >nul
 if %ErrorLevel% neq 0 echo>&2.Registry key: "!RegKey!" & set "ExitCode=1"
 
-echo.Registered text editor: "%FilePath%"
-echo.ProgID: "%ProgId%"
+echo.Registered text editor: "%FilePath%" using ProgID: "%ProgId%"
 
 goto ExitPause
 
