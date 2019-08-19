@@ -233,7 +233,7 @@ echo.  C:\^>%ThisFileNameNoExt%
 echo.    Prompts for the path to the text editor.
 echo.
 echo.  C:\^>%ThisFileNameNoExt% "C:\apps\NotePad++\notepad++.exe"
-echo.    Registers Notepad++ as a text editor.
+echo.    Registers Notepad++ as a text editor using the ProgID "notepad++.exe".
 echo.
 echo.  C:\^>%FileName% "C:\apps\NotePad++\notepad++.exe" npp
 echo.    Registers Notepad++ as a text editor using the ProgID "npp.exe".
