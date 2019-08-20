@@ -88,13 +88,28 @@ REM echo.DEBUG :RegisterTextExt %*
 REM echo.DEBUG Extension='%Extension%'
 
 set RegKeyHkcuClasses=HKEY_CURRENT_USER\Software\Classes
+set ExitCode=0
 
 REM Register the extension as a text file.
 set RegKey=%RegKeyHkcuClasses%\%Extension%
 reg add "%RegKey%" /v "PerceivedType" /d "text" /f >nul
-if %ErrorLevel% neq 0 echo>&2.Registry key: '!RegKey!' & goto ExitPause
+if %ErrorLevel% neq 0 echo>&2.Registry key: '!RegKey!' & set "ExitCode=1"
+
+
+REM Register the mime type only if it is not defined.
+call :SetErrorLevel 0
+set RegKey=HKEY_CLASSES_ROOT\%Extension%
+reg query "%RegKey%" /v "Content Type" >nul 2>&1
+if %ErrorLevel% neq 0 (
+    call :SetErrorLevel 0
+    set RegKey=!RegKeyHkcuClasses!\!Extension!
+    reg add "!RegKey!" /v "Content Type" /d "text/plain" >nul
+    if !ErrorLevel! neq 0 echo>&2.Registry key: "!RegKey!" & set "ExitCode=1"
+)
+
+if %ExitCode% neq 0 goto ExitPause
+
 echo.Registered "%Extension%" as a text file extension.
-set ExitCode=0
 
 goto ExitPause
 
