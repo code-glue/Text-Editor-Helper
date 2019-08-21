@@ -144,13 +144,13 @@ set RegKeyHkcuClasses=HKEY_CURRENT_USER\Software\Classes
 set RegKeyAppPaths=HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\App Paths\%ProgId%
 set ExitCode=0
 
-REM Register the text editor as an application using its file name for the "open" verb.
-set RegKey=%RegKeyHkcuClasses%\Applications\%ProgId%\shell\open\command
+REM Register the text editor as an application for the "edit" verb.
+set RegKey=%RegKeyHkcuClasses%\Applications\%ProgId%\shell\edit\command
 reg add "%RegKey%" /ve /d "\"%FilePath%\" \"%%1\"" /f >nul
 if %ErrorLevel% neq 0 echo>&2.Registry key: '!RegKey!' & set "ExitCode=1"
 
-REM Register the text editor as an application using its file name for the "edit" verb.
-set RegKey=%RegKeyHkcuClasses%\Applications\%ProgId%\shell\edit\command
+REM Register the text editor as an application for the "open" verb.
+set RegKey=%RegKeyHkcuClasses%\Applications\%ProgId%\shell\open\command
 reg add "%RegKey%" /ve /d "\"%FilePath%\" \"%%1\"" /f >nul
 if %ErrorLevel% neq 0 echo>&2.Registry key: '!RegKey!' & set "ExitCode=1"
 
