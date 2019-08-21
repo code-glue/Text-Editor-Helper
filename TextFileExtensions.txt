@@ -167,6 +167,7 @@ jav
 java
 js
 jscsrc
+jse
 jsfl
 jshintrc
 jshtm
