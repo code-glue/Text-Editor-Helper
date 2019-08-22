@@ -1,0 +1,15 @@
+' Use single apostrophe (') for commenting.
+' These program IDs unfortunately have an explicit edit handler (notepad.exe) already defined in the registry.
+' To change the handler, one must overwrite the existing value rather than use the recommended method of setting a default text editor.  
+batfile
+cmdfile
+htafile
+JSFile
+JSEFile
+regfile
+themefile
+VBEFile
+VBSFile
+Windows.XamlDocument
+Windows.Xbap
+WSFFile
