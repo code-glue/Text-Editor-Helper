@@ -344,6 +344,7 @@ user
 usr
 v
 vb
+vbe
 vbproj
 vbs
 vcproj
@@ -371,11 +372,13 @@ wnt
 wpn
 wri
 wsdl
+wsf
 wtx
 wxi
 wxl
 wxs
 xaml
+xbap
 xhtml
 xlf
 xliff
