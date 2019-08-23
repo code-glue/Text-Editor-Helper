@@ -36,7 +36,7 @@ call :PrintHeader
 REM Prompt the user for the file path. If empty, reset and try again.
 REM echo.DEBUG :UserEnterFilePath %*
 call :SetErrorLevel 0
-set /p Arg1="Enter file path [Ctrl+C to exit]: "
+set /p Arg1="Enter path to Edit handler [Ctrl+C to exit]: "
 if %ErrorLevel% neq 0 set "Arg1=" & goto UserEnterFilePath
 
 REM echo.DEBUG Arg1='%Arg1%'
@@ -57,7 +57,8 @@ if not defined FilePath call :BadArg & goto ExitPause
 REM echo.DEBUG FilePath='%FilePath%'
 
 if exist "%FilePath%" (2>nul pushd "%FilePath%" && (popd) || goto RegisterApp)
-call :FileNotFound & goto ExitPause
+call :FileNotFound
+goto ExitPause
 
 
 :RegisterApp
@@ -111,9 +112,7 @@ echo.Description:
 echo.  Registers the specified program as the Edit handler for the program IDS below.
 echo.
 echo.Program IDs:
-for /f "usebackq eol=' tokens=*" %%a in ("%ProgIdsPath%") do (
-    set AllExts=!AllExts!%%a 
-)
+for /f "usebackq eol=' tokens=*" %%a in ("%ProgIdsPath%") do set "AllExts=!AllExts!%%a "
 
 echo.  %AllExts%
 echo.

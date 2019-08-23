@@ -1,8 +1,5 @@
 @echo off
 
-:: %License%
-
-
 SetLocal EnableDelayedExpansion
 
 set ExitCode=1
@@ -29,8 +26,6 @@ if not defined Arg1NoSpaces call :BadArg & goto ExitPause
 REM echo.DEBUG Arg1NoSpaces='%Arg1NoSpaces%'
 if "!Arg1NoSpaces!" == "/?" goto HelpArg
 
-if not defined Arg2 goto GetFilePathAndProgId
-
 set Arg2NoQuotes=%Arg2:"=%
 REM echo.DEBUG Arg2NoQuotes='%Arg2NoQuotes%'
 if defined Arg2NoQuotes set "Arg2NoSpaces=%Arg2NoQuotes: =%"
@@ -49,7 +44,7 @@ call :PrintHeader
 REM Prompt the user for the file path. If empty, reset and try again.
 REM echo.DEBUG :UserEnterFilePath %*
 call :SetErrorLevel 0
-set /p Arg1="Enter file path to .exe file [Ctrl+C to exit]: "
+set /p Arg1="Enter path to Edit handler file [Ctrl+C to exit]: "
 if %ErrorLevel% neq 0 set "Arg1=" & goto UserEnterFilePath
 
 REM echo.DEBUG Arg1='%Arg1%'
@@ -91,9 +86,7 @@ goto GetFilePathAndProgId
 
 :GetFilePathAndProgId
 REM echo.DEBUG :GetFilePathAndProgId %*
-for /f "tokens=*" %%a in ("%Arg1NoQuotes%") do (
-    set "FilePath=%%~fa"
-)
+for /f "tokens=*" %%a in ("%Arg1NoQuotes%") do set "FilePath=%%~fa"
 
 if not defined FilePath call :BadArg & goto ExitPause
 
