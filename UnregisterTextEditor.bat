@@ -170,9 +170,11 @@ REM echo.DEBUG :HelpArg %*
 :Usage
 call :PrintHeader
 echo.Usage:
-echo.  %ThisFileNameNoExt% [ProgId]
+echo.  %ThisFileNameNoExt% [ProgId[.exe]]
 echo.
-echo.    ProgId    Program ID of the text editor (usually its file name).
+echo.    ProgId    Program ID of the text editor (usually its file name), optionally
+echo.              followed by ".exe".
+echo.              If no extension is entered, ".exe" is appended.
 echo.              If excluded, user is prompted for the program ID.
 echo.
 echo.Examples:
@@ -180,7 +182,10 @@ echo.  C:\^>%ThisFileNameNoExt%
 echo.    Prompts for the program ID of the text editor.
 echo.
 echo.  C:\^>%ThisFileNameNoExt% "notepad++.exe"
-echo.    Unregisters Notepad++ as a text editor.
+echo.    Unregisters Notepad++ as a text editor using ProgID "notepad++.exe".
+echo.
+echo.  C:\^>%ThisFileNameNoExt% npp
+echo.    Unregisters Notepad++ as a text editor using ProgID "npp.exe".
 
 goto Exit
 
