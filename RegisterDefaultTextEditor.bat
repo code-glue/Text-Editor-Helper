@@ -253,8 +253,9 @@ goto Exit
 :PrintHeader
 echo.
 echo.Description:
-echo.  Registers the specified program as a text editor and adds it to the "Open with"
-echo.  list for text files and for files with no extension.
+echo.  Registers the specified program as the default Edit handler for text files
+echo.  and adds it to the "Open with" list for text files and for files with no
+echo.  extension.
 echo.
 exit /b 1
 
