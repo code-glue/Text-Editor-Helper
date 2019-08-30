@@ -33,6 +33,7 @@ ___
 
       C:\>RegisterTextFileExt .sln
         Registers the file extension ".sln" as a text file.
+
 **Demo:**
 ![Before and After Demo](demo/TextFileExtBeforeAfter.gif?raw=true "Before and After Demo")
 ___
