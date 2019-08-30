@@ -145,7 +145,7 @@ Registers the specified program as the "Edit" handler for the specified program 
         In most cases this represents .js (javascript) files.
 ___
 ### RegisterExplicitEditHandlerForAll.bat
-Registers the specified program as the "Edit" handler for all the program IDS below.
+Registers the specified program as the "Edit" handler for all the program IDs below.
 
 **Note:**
 

@@ -109,7 +109,7 @@ REM echo.DEBUG :HelpArg %*
 :Usage
 echo.
 echo.Description:
-echo.  Registers the specified program as the "Edit" handler for all the program IDS below.
+echo.  Registers the specified program as the "Edit" handler for all the program IDs below.
 echo.
 echo.Program IDs:
 for /f "usebackq eol=' tokens=*" %%a in ("%ProgIdsPath%") do set "AllExts=!AllExts!%%a "
