@@ -1,6 +1,6 @@
 ' Use single apostrophe (') for commenting.
-' These program IDs unfortunately have an explicit edit handler (notepad.exe) already defined in the registry.
-' To change the handler, one must overwrite the existing value rather than use the recommended method of setting a default text editor.  
+' Some program IDs already have an explicit "Edit" handler (e.g. Notepad.exe) already defined in the registry (as opposed to having a default handler for all text files).
+' To change the handler, one must overwrite the existing value.
 batfile
 cmdfile
 htafile
