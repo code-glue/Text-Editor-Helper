@@ -15,7 +15,7 @@ ___
 ___
 **Notes:**
 
-* Does not change your default text editor or any default applications.
+* Does not change your default text editor or any default applications for opening files.
 * Affects only the current user.
 * Administrative privileges are not required.
 ___
