@@ -10,8 +10,8 @@ ___
 ___
 #### TL;DR
 1. Run *RegisterTextFileExtForAll.bat*
-2. Run *RegisterDefaultTextEditHandler.bat*
-3. Run *RegisterExplicitEditHandlerForAll.bat*
+2. Run *RegisterDefaultTextEditHandler.bat*. Enter the path to your text editor. 
+3. Run *RegisterExplicitEditHandlerForAll.bat*. Enter the path to your text editor.
 ___
 **Notes:**
 
