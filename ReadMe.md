@@ -9,9 +9,9 @@ ___
 ### For example, in addition to opening an HTML file in your browser, you can also edit the file in Notepad++.
 ___
 #### TL;DR
-1. Run *RegisterTextFileExtForAll.bat*
-2. Run *RegisterDefaultTextEditHandler.bat*. Enter the path to your text editor. 
-3. Run *RegisterExplicitEditHandlerForAll.bat*. Enter the path to your text editor.
+1. Run "*RegisterTextFileExtForAll.bat*"
+2. Run "*RegisterDefaultTextEditHandler.bat*". Enter the path to your text editor. 
+3. Run "*RegisterExplicitEditHandlerForAll.bat*". Enter the path to your text editor.
 ___
 **Notes:**
 
