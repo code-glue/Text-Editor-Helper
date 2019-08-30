@@ -116,6 +116,7 @@ Registers the specified program as the default "Edit" handler for text files and
 ___
 ### RegisterExplicitEditHandler.bat
 Registers the specified program as the "Edit" handler for the specified program ID.
+
 **Note:**
 
 * Some program IDs already have an explicit "Edit" handler (e.g. *Notepad.exe*) already defined in the registry (as opposed to having a default handler for all text files).
@@ -145,6 +146,7 @@ Registers the specified program as the "Edit" handler for the specified program 
 ___
 ### RegisterExplicitEditHandlerForAll.bat
 Registers the specified program as the "Edit" handler for all the program IDS below.
+
 **Note:**
 
 * Some program IDs already have an explicit "Edit" handler (e.g. *Notepad.exe*) already defined in the registry (as opposed to having a default handler for all text files).
