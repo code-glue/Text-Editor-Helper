@@ -29,7 +29,7 @@ goto ExitPause
 
 :NoArgs
 REM echo.DEBUG :NoArgs %*
-call :PrintHeader
+goto :UserEnterFilePath
 
 
 :UserEnterFilePath
