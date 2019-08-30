@@ -8,6 +8,11 @@
 ___
 ### For example, in addition to opening an HTML file in your browser, you can also edit the file in Notepad++.
 ___
+#### TL;DR
+1. Run *RegisterTextFileExtForAll.bat*
+2. Run *RegisterDefaultTextEditHandler.bat*
+3. Run *RegisterExplicitEditHandlerForAll.bat*
+___
 **Notes:**
 
 * Does not change your default text editor or any default applications.
