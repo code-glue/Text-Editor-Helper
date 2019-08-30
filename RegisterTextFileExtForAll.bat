@@ -56,8 +56,9 @@ REM echo.DEBUG :HelpArg %*
 :Usage
 echo.
 echo.Description:
-echo.  Registers all of the file extensions below as text files so they may be
-echo.  easily opened in any text editor.
+echo.  Registers all of the file extensions below as text files. This adds the "Edit"
+echo.  option to the file's context menu and adds the list of all registered text
+echo.  editors to the "Open with" menu.
 echo.
 echo.File extensions:
 for /f "usebackq eol=' tokens=*" %%a in ("%FileExtensionsPath%") do (

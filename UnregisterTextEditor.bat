@@ -170,12 +170,12 @@ REM echo.DEBUG :HelpArg %*
 :Usage
 call :PrintHeader
 echo.Usage:
-echo.  %ThisFileNameNoExt% [ProgId[.exe]]
+echo.  %ThisFileNameNoExt% [ProgID[.exe]]
 echo.
-echo.    ProgId    Program ID of the text editor (usually its file name), optionally
+echo.    ProgID    Program ID of the text editor (usually its file name), optionally
 echo.              followed by ".exe".
-echo.              If no extension is entered, ".exe" is appended.
 echo.              If excluded, user is prompted for the program ID.
+echo.              If no extension is entered, ".exe" is appended.
 echo.
 echo.Examples:
 echo.  C:\^>%ThisFileNameNoExt%

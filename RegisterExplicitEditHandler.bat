@@ -180,7 +180,7 @@ echo.  %ThisFileNameNoExt% [FilePath ProgID]
 echo.
 echo.    FilePath     Path to the application.
 echo.                 If excluded, user is prompted for the path and program ID.
-echo.    ProgID       The program ID whose Edit handler will be set.
+echo.    ProgID       The program ID whose "Edit" handler will be set.
 echo.                 This must be an existing program ID.
 echo.
 echo.Examples:
@@ -188,11 +188,11 @@ echo.  C:\^>%ThisFileNameNoExt%
 echo.    Prompts for the application path and the program ID.
 echo.
 echo.  C:\^>%ThisFileNameNoExt% "C:\apps\NotePad++\notepad++.exe" "batfile"
-echo.    Registers Notepad++ as the Edit handler for the batfile program ID.
+echo.    Registers Notepad++ as the "Edit" handler for the "batfile" program ID.
 echo.    In most cases this represents .bat (batch) files.
 echo.
-echo.  C:\^>%FileName% "C:\apps\NotePad++\notepad++.exe" JSFile
-echo.    Registers Notepad++ as the Edit handler for the JSFile program ID.
+echo.  C:\^>%ThisFileNameNoExt% "C:\apps\NotePad++\notepad++.exe" JSFile
+echo.    Registers Notepad++ as the "Edit" handler for the "JSFile" program ID.
 echo.    In most cases this represents .js (javascript) files.
 
 goto Exit
@@ -201,7 +201,7 @@ goto Exit
 :PrintHeader
 echo.
 echo.Description:
-echo.  Registers the specified program as the Edit handler for the specified program ID.
+echo.  Registers the specified program as the "Edit" handler for the specified program ID.
 echo.
 exit /b 1
 

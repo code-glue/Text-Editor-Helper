@@ -168,8 +168,9 @@ goto Exit
 :PrintHeader
 echo.
 echo.Description:
-echo.  Registers the specified file extension as a text file so it may be
-echo.  easily opened in any text editor.
+echo.  Registers the specified file extension as a text file. This adds the "Edit"
+echo.  option to the file's context menu and adds the list of all registered text
+echo.  editors to the "Open with" menu.
 echo.
 exit /b 1
 

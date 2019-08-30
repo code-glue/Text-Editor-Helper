@@ -109,7 +109,7 @@ REM echo.DEBUG :HelpArg %*
 :Usage
 echo.
 echo.Description:
-echo.  Registers the specified program as the Edit handler for the program IDS below.
+echo.  Registers the specified program as the "Edit" handler for all the program IDS below.
 echo.
 echo.Program IDs:
 for /f "usebackq eol=' tokens=*" %%a in ("%ProgIdsPath%") do set "AllExts=!AllExts!%%a "
@@ -127,7 +127,7 @@ echo.  C:\^>%ThisFileNameNoExt%
 echo.    Prompts for the application path.
 echo.
 echo.  C:\^>%ThisFileNameNoExt% "C:\apps\NotePad++\notepad++.exe"
-echo.    Registers Notepad++ as the Edit handler for all the listed program IDs.
+echo.    Registers Notepad++ as the "Edit" handler for all the listed program IDs.
 
 goto Exit
 

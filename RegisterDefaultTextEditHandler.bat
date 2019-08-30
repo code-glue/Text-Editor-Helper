@@ -242,10 +242,12 @@ echo.  C:\^>%ThisFileNameNoExt%
 echo.    Prompts for the path to the text editor.
 echo.
 echo.  C:\^>%ThisFileNameNoExt% "C:\apps\NotePad++\notepad++.exe"
-echo.    Registers Notepad++ as a text editor using the ProgID "notepad++.exe".
+echo.    Registers Notepad++ as the default Edit handler for text files using the
+echo.    ProgID "notepad++.exe".
 echo.
-echo.  C:\^>%FileName% "C:\apps\NotePad++\notepad++.exe" npp
-echo.    Registers Notepad++ as a text editor using the ProgID "npp.exe".
+echo.  C:\^>%ThisFileNameNoExt% "C:\apps\NotePad++\notepad++.exe" npp
+echo.    Registers Notepad++ as the default Edit handler for text files using the
+echo.    ProgID "npp.exe".
 
 goto Exit
 
@@ -253,7 +255,7 @@ goto Exit
 :PrintHeader
 echo.
 echo.Description:
-echo.  Registers the specified program as the default Edit handler for text files
+echo.  Registers the specified program as the default "Edit" handler for text files
 echo.  and adds it to the "Open with" list for text files and for files with no
 echo.  extension.
 echo.
